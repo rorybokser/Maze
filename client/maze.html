@@ -1,0 +1,184 @@
+<head>
+  <title>maze</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <h1 class="game-title">Maze - {{myScore}} points - {{myShifts}} shifts</h1>
+
+
+  {{> mazeGame}}
+</body>
+
+<template name="mazeGame">
+	<div class="game">
+		<div class="game-row">
+			<div class="game-column"></div>
+	  	<div class="game-column wall-shift" id="1y0"><i class="fa center fa-caret-up"></i></div>
+	  	<div class="game-column wall-shift" id="1y1"><i class="fa center fa-caret-up"></i></div>
+	  	<div class="game-column wall-shift" id="1y2"><i class="fa center fa-caret-up"></i></div>
+	  	<div class="game-column wall-shift" id="1y3"><i class="fa center fa-caret-up"></i></div>
+	  	<div class="game-column wall-shift" id="1y4"><i class="fa center fa-caret-up"></i></div>
+	  	<div class="game-column wall-shift" id="1y5"><i class="fa center fa-caret-up"></i></div>
+	  	<div class="game-column wall-shift" id="1y6"><i class="fa center fa-caret-up"></i></div>
+	  	<div class="game-column wall-shift" id="1y7"><i class="fa center fa-caret-up"></i></div>
+	  	<div class="game-column wall-shift" id="1y8"><i class="fa center fa-caret-up"></i></div>
+	  	<div class="game-column wall-shift" id="1y9"><i class="fa center fa-caret-up"></i></div>
+	  	<div class="game-column"></div>
+	  </div>
+		<div class="game-row">
+			<div class="game-column wall-shift" id="0x9"><i class="fa center fa-caret-left"></i></div>
+	  	<div class="game-column" id="09"></div>
+	  	<div class="game-column" id="19"></div>
+	  	<div class="game-column" id="29"></div>
+	  	<div class="game-column" id="39"></div>
+	  	<div class="game-column" id="49"></div>
+	  	<div class="game-column" id="59"></div>
+	  	<div class="game-column" id="69"></div>
+	  	<div class="game-column" id="79"></div>
+	  	<div class="game-column" id="89"></div>
+	  	<div class="game-column" id="99"></div>
+	  	<div class="game-column wall-shift" id="1x9"><i class="fa center fa-caret-right"></i></div>
+	  </div>
+	  <div class="game-row">
+	  	<div class="game-column wall-shift" id="0x8"><i class="fa center fa-caret-left"></i></div>
+	  	<div class="game-column" id="08"></div>
+	  	<div class="game-column" id="18"></div>
+	  	<div class="game-column" id="28"></div>
+	  	<div class="game-column" id="38"></div>
+	  	<div class="game-column" id="48"></div>
+	  	<div class="game-column" id="58"></div>
+	  	<div class="game-column" id="68"></div>
+	  	<div class="game-column" id="78"></div>
+	  	<div class="game-column" id="88"></div>
+	  	<div class="game-column" id="98"></div>
+	  	<div class="game-column wall-shift" id="1x8"><i class="fa center fa-caret-right"></i></div>
+	  </div>
+	  <div class="game-row">
+	  	<div class="game-column wall-shift" id="0x7"><i class="fa center fa-caret-left"></i></div>
+	  	<div class="game-column" id="07"></div>
+	  	<div class="game-column" id="17"></div>
+	  	<div class="game-column" id="27"></div>
+	  	<div class="game-column" id="37"></div>
+	  	<div class="game-column" id="47"></div>
+	  	<div class="game-column" id="57"></div>
+	  	<div class="game-column" id="67"></div>
+	  	<div class="game-column" id="77"></div>
+	  	<div class="game-column" id="87"></div>
+	  	<div class="game-column" id="97"></div>
+	  	<div class="game-column wall-shift" id="1x7"><i class="fa center fa-caret-right"></i></div>
+	  </div>
+	  <div class="game-row">
+	  	<div class="game-column wall-shift" id="0x6"><i class="fa center fa-caret-left"></i></div>
+	  	<div class="game-column" id="06"></div>
+	  	<div class="game-column" id="16"></div>
+	  	<div class="game-column" id="26"></div>
+	  	<div class="game-column" id="36"></div>
+	  	<div class="game-column" id="46"></div>
+	  	<div class="game-column" id="56"></div>
+	  	<div class="game-column" id="66"></div>
+	  	<div class="game-column" id="76"></div>
+	  	<div class="game-column" id="86"></div>
+	  	<div class="game-column" id="96"></div>
+	  	<div class="game-column wall-shift" id="1x6"><i class="fa center fa-caret-right"></i></div>
+	  </div>
+	 	<div class="game-row">
+	 		<div class="game-column wall-shift" id="0x5"><i class="fa center fa-caret-left"></i></div>
+	  	<div class="game-column" id="05"></div>
+	  	<div class="game-column" id="15"></div>
+	  	<div class="game-column" id="25"></div>
+	  	<div class="game-column" id="35"></div>
+	  	<div class="game-column" id="45"></div>
+	  	<div class="game-column" id="55"></div>
+	  	<div class="game-column" id="65"></div>
+	  	<div class="game-column" id="75"></div>
+	  	<div class="game-column" id="85"></div>
+	  	<div class="game-column" id="95"></div>
+	  	<div class="game-column wall-shift" id="1x5"><i class="fa center fa-caret-right"></i></div>
+	  </div>
+	  <div class="game-row">
+	  	<div class="game-column wall-shift" id="0x4"><i class="fa center fa-caret-left"></i></div>
+	  	<div class="game-column" id="04"></div>
+	  	<div class="game-column" id="14"></div>
+	  	<div class="game-column" id="24"></div>
+	  	<div class="game-column" id="34"></div>
+	  	<div class="game-column" id="44"></div>
+	  	<div class="game-column" id="54"></div>
+	  	<div class="game-column" id="64"></div>
+	  	<div class="game-column" id="74"></div>
+	  	<div class="game-column" id="84"></div>
+	  	<div class="game-column" id="94"></div>
+	  	<div class="game-column wall-shift" id="1x4"><i class="fa center fa-caret-right"></i></div>
+	  </div>
+	  <div class="game-row">
+	  	<div class="game-column wall-shift" id="0x3"><i class="fa center fa-caret-left"></i></div>
+	  	<div class="game-column" id="03"></div>
+	  	<div class="game-column" id="13"></div>
+	  	<div class="game-column" id="23"></div>
+	  	<div class="game-column" id="33"></div>
+	  	<div class="game-column" id="43"></div>
+	  	<div class="game-column" id="53"></div>
+	  	<div class="game-column" id="63"></div>
+	  	<div class="game-column" id="73"></div>
+	  	<div class="game-column" id="83"></div>
+	  	<div class="game-column" id="93"></div>
+	  	<div class="game-column wall-shift" id="1x3"><i class="fa center fa-caret-right"></i></div>
+	  </div>
+	  <div class="game-row">
+	  	<div class="game-column wall-shift" id="0x2"><i class="fa center fa-caret-left"></i></div>
+	  	<div class="game-column" id="02"></div>
+	  	<div class="game-column" id="12"></div>
+	  	<div class="game-column" id="22"></div>
+	  	<div class="game-column" id="32"></div>
+	  	<div class="game-column" id="42"></div>
+	  	<div class="game-column" id="52"></div>
+	  	<div class="game-column" id="62"></div>
+	  	<div class="game-column" id="72"></div>
+	  	<div class="game-column" id="82"></div>
+	  	<div class="game-column" id="92"></div>
+	  	<div class="game-column wall-shift" id="1x2"><i class="fa center fa-caret-right"></i></div>
+	  </div>
+	  <div class="game-row">
+	  	<div class="game-column wall-shift" id="0x1"><i class="fa center fa-caret-left"></i></div>
+	  	<div class="game-column" id="01"></div>
+	  	<div class="game-column" id="11"></div>
+	  	<div class="game-column" id="21"></div>
+	  	<div class="game-column" id="31"></div>
+	  	<div class="game-column" id="41"></div>
+	  	<div class="game-column" id="51"></div>
+	  	<div class="game-column" id="61"></div>
+	  	<div class="game-column" id="71"></div>
+	  	<div class="game-column" id="81"></div>
+	  	<div class="game-column" id="91"></div>
+	  	<div class="game-column wall-shift" id="1x1"><i class="fa center fa-caret-right"></i></div>
+	  </div>
+	  <div class="game-row">
+	  	<div class="game-column wall-shift" id="0x0"><i class="fa center fa-caret-left"></i></div>
+	  	<div class="game-column" id="00"></div>
+	  	<div class="game-column" id="10"></div>
+	  	<div class="game-column" id="20"></div>
+	  	<div class="game-column" id="30"></div>
+	  	<div class="game-column" id="40"></div>
+	  	<div class="game-column" id="50"></div>
+	  	<div class="game-column" id="60"></div>
+	  	<div class="game-column" id="70"></div>
+	  	<div class="game-column" id="80"></div>
+	  	<div class="game-column" id="90"></div>
+	  	<div class="game-column wall-shift" id="1x0"><i class="fa center fa-caret-right"></i></div>
+	  </div>
+	  <div class="game-row">
+			<div class="game-column"></div>
+	  	<div class="game-column wall-shift" id="0y0"><i class="fa center fa-caret-down"></i></div>
+	  	<div class="game-column wall-shift" id="0y1"><i class="fa center fa-caret-down"></i></div>
+	  	<div class="game-column wall-shift" id="0y2"><i class="fa center fa-caret-down"></i></div>
+	  	<div class="game-column wall-shift" id="0y3"><i class="fa center fa-caret-down"></i></div>
+	  	<div class="game-column wall-shift" id="0y4"><i class="fa center fa-caret-down"></i></div>
+	  	<div class="game-column wall-shift" id="0y5"><i class="fa center fa-caret-down"></i></div>
+	  	<div class="game-column wall-shift" id="0y6"><i class="fa center fa-caret-down"></i></div>
+	  	<div class="game-column wall-shift" id="0y7"><i class="fa center fa-caret-down"></i></div>
+	  	<div class="game-column wall-shift" id="0y8"><i class="fa center fa-caret-down"></i></div>
+	  	<div class="game-column wall-shift" id="0y9"><i class="fa center fa-caret-down"></i></div>
+	  	<div class="game-column"></div>
+	  </div>
+	</div>
+</template>

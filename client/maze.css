@@ -1,0 +1,46 @@
+/* CSS declarations go here */
+.game-title {
+	text-align: center;
+}
+
+.game {
+	height: 600px;
+	width: 600px;
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+	border-top: 1px solid black;
+	border-left: 1px solid black;
+}
+
+.game-row {
+	height: 50px;
+	width:  600px;
+}
+
+.game-column {
+	float: left;
+	height: 49px;
+	width: 49px;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 49px;
+	border-bottom: 1px solid black;
+	border-right: 1px solid black;
+}
+
+.curPos {
+	background-color: #ff0000 !important;
+}
+
+.foodPos {
+	background-color: #00ff00;
+}
+
+.wallPos {
+	background-color: #0000ff;
+}
+
+.center {
+	pointer-events: none;
+}
